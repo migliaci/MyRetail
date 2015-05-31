@@ -54,6 +54,8 @@ EXAMPLE:
 
     GET http://localhost:3000/products/16752456
 
+RESPONSE:
+
     {
         "id": 16752456,
         "name": "Lego&reg; Super Heroes The Tumbler 76023",
@@ -68,6 +70,8 @@ Value listed for {id} must be numeric.  Improperly formatted {id} values will re
 EXAMPLE:
 
     GET http://localhost:3000/products/foo
+
+RESPONSE:
 
     {
         "error_message": "Bad request: product id was malformed."
@@ -109,6 +113,15 @@ Both "value" and "currency_code" are required values, and must be formatted as f
 "currency_code": must be specified as "USD".  Currently other currency_code values are not supported but can be easily added via the validator module.
 
 Specifying an invalid payload will return the following response:
+
+PAYLOAD:
+
+    {
+        "value":"FOOBAR!",
+        "currency_code":"NOPE!"
+    }
+
+RESPONSE:
 
     {
         "error_message": "Bad request: request payload was malformed."
