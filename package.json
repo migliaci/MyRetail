@@ -1,5 +1,5 @@
 {
-  "name": "target-sample",
+  "name": "my-retail",
   "version": "1.0.0",
   "description": "myRetail RESTful API",
   "main": "server.js",

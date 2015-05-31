@@ -21,6 +21,9 @@ db.open(function(err, db) {
                 populateDB();
             }
         });
+    } else {
+        console.log("Could not connect to database. Is Mongo running?");
+        console.log(err);
     }
 });
 
